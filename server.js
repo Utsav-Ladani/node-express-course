@@ -14,6 +14,14 @@ app.get('/users', (req, res) => {
     })
 })
 
+app.get('/users-:id', (req, res) => {
+    res.json({
+        success: true,
+        message: 'Dynamic GET route',
+        user: req.params.id
+    })
+})
+
 app.listen(8000, function () {
     console.log("server is running")
 })
